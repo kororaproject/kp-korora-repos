@@ -6,7 +6,7 @@ License:        MIT
 Group:          System Environment/Base
 URL:            https://git.fedorahosted.org/cgit/fedora-repos.git/
 # tarball is created by running make archive in the git checkout
-Source:         %{name}-%{version}.tar.bz2
+Source:         %{name}-%{version}.tar.gz
 Provides:       korora-repos(%{version})
 Requires:       system-release(%{version})
 Provides:	fedora-repos
