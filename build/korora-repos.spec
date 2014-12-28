@@ -1,7 +1,7 @@
 Summary:        Korora package repositories
 Name:           korora-repos
 Version:        21
-Release:        2
+Release:        3
 License:        MIT
 Group:          System Environment/Base
 URL:            https://git.fedorahosted.org/cgit/fedora-repos.git/
@@ -76,6 +76,9 @@ done
 %config(noreplace) /etc/yum.repos.d/fedora-rawhide.repo
 
 %changelog
+* Mon Dec 29 2014 Chris Smart <csmart@kororaproject.org> 21-3
+- Add Korora 21 GPG keys.
+
 * Sat Nov 22 2014 Dennis Gilmore <dennis@ausil.us> 21-2
 - Obsolete fedora-repos-anaconda < 21-1
 - due to initial confusion over it some people got it installed
