@@ -1,30 +1,29 @@
-Summary:        Korora package repositories
-Name:           korora-repos
+Summary:        Fedora package repositories
+Name:           fedora-repos
 Version:        22
 Release:        1
 License:        MIT
 Group:          System Environment/Base
 URL:            https://git.fedorahosted.org/cgit/fedora-repos.git/
 # tarball is created by running make archive in the git checkout
-Source:         %{name}-%{version}.tar.gz
-Provides:       korora-repos(%{version})
+Source:         %{name}-%{version}.tar.bz2
+Provides:       fedora-repos(%{version})
 Requires:       system-release(%{version})
 Obsoletes:      fedora-repos-rawhide < 22-0.3
-Provides:	fedora-repos
-Obsoletes:	fedora-repos
 Obsoletes:      fedora-repos-anaconda < 22-0.3
 BuildArch:      noarch
 
 %description
-Korora package repository files for yum and dnf along with gpg public keys
+Fedora package repository files for yum and dnf along with gpg public keys
 
 %package rawhide
 Summary:        Rawhide repo definitions
-Requires:       korora-repos = %{version}-%{release}
+Requires:       fedora-repos = %{version}-%{release}
 Obsoletes:      fedora-release-rawhide <= 22-0.3
 
 %description rawhide
 This package provides the rawhide repo definitions.
+
 
 %prep
 %setup -q
@@ -55,7 +54,7 @@ ln -s RPM-GPG-KEY-fedora-%{version}-primary RPM-GPG-KEY-%{version}-fedora
 popd
 
 install -d -m 755 $RPM_BUILD_ROOT/etc/yum.repos.d
-for file in fedora*repo korora*repo ; do
+for file in fedora*repo ; do
   install -m 644 $file $RPM_BUILD_ROOT/etc/yum.repos.d
 done
 
@@ -65,7 +64,6 @@ done
 %dir /etc/yum.repos.d
 %config(noreplace) /etc/yum.repos.d/fedora.repo
 %config(noreplace) /etc/yum.repos.d/fedora-updates*.repo
-%config(noreplace) /etc/yum.repos.d/korora.repo
 %dir /etc/pki/rpm-gpg
 /etc/pki/rpm-gpg/*
 
@@ -83,10 +81,10 @@ done
 
 * Wed Sep 10 2014 Dennis Gilmore <dennis@ausil.us> 22-0.2
 - add repo files for the products
-    
+
 * Tue Jul 08 2014 Dennis Gilmore <dennis@ausil.us> 22-0.1
 - setup for rawhide targeting f22
-    
+
 * Tue Jul 08 2014 Dennis Gilmore <dennis@ausil.us> 21-0.4
 - Require fedora-repos-rawhide from main package
 - have fedora-repos-rawhide obsolete fedora-release-rawhide
@@ -97,10 +95,9 @@ done
 - Requires:       system-release(%%{version})
 - change url to git repo
 - add note on how to make a tarball
-  
+
 * Tue Jul 08 2014 Dennis Gilmore <dennis@ausil.us> 21-0.2
 - use %%{version} not %%{dist_version} in symlink command
 
 * Tue Jul 08 2014 Dennis Gilmore <dennis@ausil.us> 21-0.1
 - Initial setup for fedora-repos
-
