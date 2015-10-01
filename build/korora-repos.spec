@@ -1,6 +1,6 @@
 Summary:        Korora package repositories
 Name:           korora-repos
-Version:        22
+Version:        23
 Release:        1
 License:        MIT
 Group:          System Environment/Base
@@ -9,10 +9,10 @@ URL:            https://git.fedorahosted.org/cgit/fedora-repos.git/
 Source:         %{name}-%{version}.tar.gz
 Provides:       korora-repos(%{version})
 Requires:       system-release(%{version})
-Obsoletes:      fedora-repos-rawhide < 22-0.3
-Provides:	fedora-repos
-Obsoletes:	fedora-repos
+Obsoletes:      fedora-repos-rawhide < 23-0.2
 Obsoletes:      fedora-repos-anaconda < 22-0.3
+Provides:       fedora-repos
+Obsoletes:      fedora-repos
 BuildArch:      noarch
 
 %description
