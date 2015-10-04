@@ -1,7 +1,7 @@
 Summary:        Korora package repositories
 Name:           korora-repos
 Version:        22
-Release:        1
+Release:        1.1
 License:        MIT
 Group:          System Environment/Base
 URL:            https://git.fedorahosted.org/cgit/fedora-repos.git/
@@ -74,6 +74,9 @@ done
 %config(noreplace) /etc/yum.repos.d/fedora-rawhide.repo
 
 %changelog
+* Mon Oct 05 2015 Chris Smart <csmart@kororaproject.org> - 22-1.1
+- add Korora 23 keys
+
 * Tue May 19 2015 Dennis Gilmore <dennis@ausil.us> - 22-1
 - prep for f22 final rhbz#1221726
 - disable updates-testing repo
