@@ -1,7 +1,7 @@
 Summary:        Korora package repositories
 Name:           korora-repos
 Version:        23
-Release:        1
+Release:        1.1
 License:        MIT
 Group:          System Environment/Base
 URL:            https://git.fedorahosted.org/cgit/fedora-repos.git/
