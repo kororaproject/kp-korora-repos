@@ -1,15 +1,15 @@
 Summary:        Korora package repositories
 Name:           korora-repos
 Version:        23
-Release:        1.1
+Release:        1.2
 License:        MIT
 Group:          System Environment/Base
-URL:            https://git.fedorahosted.org/cgit/fedora-repos.git/
+URL:            https://pagure.io/fedora-repos/
 # tarball is created by running make archive in the git checkout
 Source:         %{name}-%{version}.tar.gz
 Provides:       korora-repos(%{version})
 Requires:       system-release(%{version})
-Obsoletes:      fedora-repos-rawhide < 23-0.2
+Obsoletes:      fedora-repos-rawhide <= 23-0.2
 Obsoletes:      fedora-repos-anaconda < 22-0.3
 Provides:       fedora-repos
 Obsoletes:      fedora-repos
@@ -74,33 +74,22 @@ done
 %config(noreplace) /etc/yum.repos.d/fedora-rawhide.repo
 
 %changelog
-* Tue May 19 2015 Dennis Gilmore <dennis@ausil.us> - 22-1
-- prep for f22 final rhbz#1221726
-- disable updates-testing repo
-
-* Tue Feb 10 2015 Peter Robinson <pbrobinson@fedoraproject.org> 22.0.3
-- Setup for f22 branch
-
-* Wed Sep 10 2014 Dennis Gilmore <dennis@ausil.us> 22-0.2
-- add repo files for the products
+* Mon Oct 19 2015 Dennis Gilmore <dennis@ausil.us> - 23-1
+- setup for Fedora 23 GA
+- disable updates-testing
+- set fedora repodata expiry at 28 days
+- add all Fedora gpg keys
     
-* Tue Jul 08 2014 Dennis Gilmore <dennis@ausil.us> 22-0.1
-- setup for rawhide targeting f22
-    
-* Tue Jul 08 2014 Dennis Gilmore <dennis@ausil.us> 21-0.4
-- Require fedora-repos-rawhide from main package
-- have fedora-repos-rawhide obsolete fedora-release-rawhide
+* Tue Jul 14 2015 Dennis Gilmore <dennis@ausil.us> - 23-0.4
+- disable rawhide
+- enable fedora, updates, updates-testing
 
-* Tue Jul 08 2014 Dennis Gilmore <dennis@ausil.us> 21-0.3
-- remove %%clean and rm in %%install
-- Provides:       fedora-repos(%%{version})
-- Requires:       system-release(%%{version})
-- change url to git repo
-- add note on how to make a tarball
-  
-* Tue Jul 08 2014 Dennis Gilmore <dennis@ausil.us> 21-0.2
-- use %%{version} not %%{dist_version} in symlink command
+* Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 23-0.3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
-* Tue Jul 08 2014 Dennis Gilmore <dennis@ausil.us> 21-0.1
-- Initial setup for fedora-repos
+* Wed Feb 18 2015 Dennis Gilmore <dennis@ausil.us> - 23-0.2
+- add the Fedora 23 gpg keys
+
+* Tue Feb 10 2015 Peter Robinson <pbrobinson@fedoraproject.org> 23-0.1
+- Setup for f23 rawhide                                                                                                                                                                                            
 
