@@ -64,6 +64,7 @@ done
 %defattr(-,root,root,-)
 %dir /etc/yum.repos.d
 %config(noreplace) /etc/yum.repos.d/fedora.repo
+%config(noreplace) /etc/yum.repos.d/fedora-cisco-openh264.repo
 %config(noreplace) /etc/yum.repos.d/fedora-updates*.repo
 %config(noreplace) /etc/yum.repos.d/korora.repo
 %dir /etc/pki/rpm-gpg
