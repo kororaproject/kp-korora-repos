@@ -1,7 +1,7 @@
 Summary:        Korora package repositories
 Name:           korora-repos
-Version:        23
-Release:        1.2
+Version:        24
+Release:        1
 License:        MIT
 Group:          System Environment/Base
 URL:            https://pagure.io/fedora-repos/
@@ -74,6 +74,9 @@ done
 %config(noreplace) /etc/yum.repos.d/fedora-rawhide.repo
 
 %changelog
+* Thu May 12 2016 Chris Smart <csmart@kororaproject.org> 24-1
+- Update for Korora 24
+
 * Mon Oct 19 2015 Dennis Gilmore <dennis@ausil.us> - 23-1
 - setup for Fedora 23 GA
 - disable updates-testing

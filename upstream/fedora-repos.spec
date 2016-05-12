@@ -1,7 +1,7 @@
 Summary:        Fedora package repositories
 Name:           fedora-repos
-Version:        23
-Release:        1
+Version:        24
+Release:        0.5
 License:        MIT
 Group:          System Environment/Base
 URL:            https://pagure.io/fedora-repos/
@@ -9,7 +9,7 @@ URL:            https://pagure.io/fedora-repos/
 Source:         %{name}-%{version}.tar.bz2
 Provides:       fedora-repos(%{version})
 Requires:       system-release(%{version})
-Obsoletes:      fedora-repos-rawhide <= 23-0.2
+Obsoletes:      fedora-repos-rawhide <= 24-0.2
 Obsoletes:      fedora-repos-anaconda < 22-0.3
 BuildArch:      noarch
 
@@ -63,6 +63,7 @@ done
 %defattr(-,root,root,-)
 %dir /etc/yum.repos.d
 %config(noreplace) /etc/yum.repos.d/fedora.repo
+%config(noreplace) /etc/yum.repos.d/fedora-cisco-openh264.repo
 %config(noreplace) /etc/yum.repos.d/fedora-updates*.repo
 %dir /etc/pki/rpm-gpg
 /etc/pki/rpm-gpg/*
@@ -72,21 +73,20 @@ done
 %config(noreplace) /etc/yum.repos.d/fedora-rawhide.repo
 
 %changelog
-* Mon Oct 19 2015 Dennis Gilmore <dennis@ausil.us> - 23-1
-- setup for Fedora 23 GA
-- disable updates-testing
-- set fedora repodata expiry at 28 days
-- add all Fedora gpg keys
+* Sat Apr 23 2016 Dennis Gilmore <dennis@ausil.us> - 24-0.5
+- add the fedora cisco openh264 repo
 
-* Tue Jul 14 2015 Dennis Gilmore <dennis@ausil.us> - 23-0.4
+* Tue Feb 23 2016 Dennis Gilmore <dennis@ausil.us> - 24-0.4
+- setup for f24 branching
+- Obsolete older fedora-repos-rawhide
 - disable rawhide
-- enable fedora, updates, updates-testing
+- enable fedora, updates and updates-testing
 
-* Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 23-0.3
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+* Wed Feb 03 2016 Fedora Release Engineering <releng@fedoraproject.org> - 24-0.3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
 
-* Wed Feb 18 2015 Dennis Gilmore <dennis@ausil.us> - 23-0.2
-- add the Fedora 23 gpg keys
+* Mon Oct 19 2015 Dennis Gilmore <dennis@ausil.us> - 24-0.2
+- add all keys f7 up to f24 rhbz#1246701
 
-* Tue Feb 10 2015 Peter Robinson <pbrobinson@fedoraproject.org> 23-0.1
-- Setup for f23 rawhide
+* Tue Jul 14 2015 Dennis Gilmore <dennis@ausil.us> - 24-0.1
+- Setup for rawhide being f24

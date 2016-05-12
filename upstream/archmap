@@ -1,10 +1,6 @@
-fedora-7-primary: i386 x86_64 ppc ppc64
-
 fedora-8-primary: i386 x86_64 ppc ppc64
-fedora-8-primary-original: i386 x86_64 ppc ppc64
 
 fedora-9-primary: i386 x86_64 ppc ppc64
-fedora-9-primary-original: i386 x86_64 ppc ppc64
 fedora-9-secondary: ia64
 
 fedora-10-primary: i386 x86_64 ppc ppc64
