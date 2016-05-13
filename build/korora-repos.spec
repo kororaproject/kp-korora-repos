@@ -1,7 +1,7 @@
 Summary:        Korora package repositories
 Name:           korora-repos
 Version:        24
-Release:        1
+Release:        1.1
 License:        MIT
 Group:          System Environment/Base
 URL:            https://pagure.io/fedora-repos/
@@ -59,6 +59,9 @@ for file in fedora*repo korora*repo ; do
   install -m 644 $file $RPM_BUILD_ROOT/etc/yum.repos.d
 done
 
+# copr config file to enable dnf copr on Korora
+install -d -m 755 $RPM_BUILD_ROOT/etc/dnf/plugins
+install -m 644 copr.conf $RPM_BUILD_ROOT/etc/dnf/plugins/copr.conf
 
 %files
 %defattr(-,root,root,-)
@@ -67,6 +70,7 @@ done
 %config(noreplace) /etc/yum.repos.d/fedora-cisco-openh264.repo
 %config(noreplace) /etc/yum.repos.d/fedora-updates*.repo
 %config(noreplace) /etc/yum.repos.d/korora.repo
+%config(noreplace) /etc/dnf/plugins/copr.conf
 %dir /etc/pki/rpm-gpg
 /etc/pki/rpm-gpg/*
 
