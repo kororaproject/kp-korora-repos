@@ -59,6 +59,9 @@ for file in fedora*repo korora*repo ; do
   install -m 644 $file $RPM_BUILD_ROOT/etc/yum.repos.d
 done
 
+# copr config to allow dnf copr commands on Korora
+install -d -m 755 $RPM_BUILD_ROOT/etc/dnf/plugins
+install -m 644 copr.conf $RPM_BUILD_ROOT/etc/dnf/plugins/copr.conf
 
 %files
 %defattr(-,root,root,-)
@@ -66,6 +69,7 @@ done
 %config(noreplace) /etc/yum.repos.d/fedora.repo
 %config(noreplace) /etc/yum.repos.d/fedora-updates*.repo
 %config(noreplace) /etc/yum.repos.d/korora.repo
+%config(noreplace) /etc/dnf/plugins/copr.conf
 %dir /etc/pki/rpm-gpg
 /etc/pki/rpm-gpg/*
 
@@ -76,6 +80,7 @@ done
 %changelog
 * Sat May 14 2016 Chris Smart <csmart@kororaproject.org> - 23-1.3
 - Add keys for Korora 24
+- Config to enable dnf copr command
 
 * Mon Oct 19 2015 Dennis Gilmore <dennis@ausil.us> - 23-1
 - setup for Fedora 23 GA
