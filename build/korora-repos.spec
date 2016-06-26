@@ -1,7 +1,7 @@
 Summary:        Korora package repositories
 Name:           korora-repos
 Version:        24
-Release:        1.1
+Release:        1.2
 License:        MIT
 Group:          System Environment/Base
 URL:            https://pagure.io/fedora-repos/
