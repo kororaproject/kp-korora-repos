@@ -45,4 +45,10 @@ fedora-23-primary: i386 x86_64 armhfp
 fedora-23-secondary: aarch64 ppc64 ppc64le s390 s390x
 
 fedora-24-primary: i386 x86_64 armhfp
-fedora-24-secondary: aarch64 ppc64 ppc64le s390 s390x
+fedora-24-secondary: aarch64 ppc64 ppc64le s390x
+
+fedora-25-primary: i386 x86_64 armhfp
+fedora-25-secondary: aarch64 ppc64 ppc64le s390x
+
+fedora-26-primary: i386 x86_64 armhfp
+fedora-26-secondary: aarch64 ppc64 ppc64le s390x

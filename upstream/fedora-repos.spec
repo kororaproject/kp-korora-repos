@@ -1,7 +1,7 @@
 Summary:        Fedora package repositories
 Name:           fedora-repos
-Version:        24
-Release:        1
+Version:        25
+Release:        0.5
 License:        MIT
 Group:          System Environment/Base
 URL:            https://pagure.io/fedora-repos/
@@ -9,7 +9,7 @@ URL:            https://pagure.io/fedora-repos/
 Source:         %{name}-%{version}.tar.bz2
 Provides:       fedora-repos(%{version})
 Requires:       system-release(%{version})
-Obsoletes:      fedora-repos-rawhide <= 24-0.2
+Obsoletes:      fedora-repos-rawhide <= 25-0.3
 Obsoletes:      fedora-repos-anaconda < 22-0.3
 BuildArch:      noarch
 
@@ -73,25 +73,19 @@ done
 %config(noreplace) /etc/yum.repos.d/fedora-rawhide.repo
 
 %changelog
-* Tue Jun 01 2016 Dennis Gilmore <dennis@ausil.us> - 24-1
-- setup for f24 final
-- disable updates-testing
-- set metadata expiry for fedora repo
+* Mon Aug 08 2016 Dennis Gilmore <dennis@ausil.us> - 25-0.5
+- fix up archmap file
+- add f26 gpg keys
 
-* Sat Apr 23 2016 Dennis Gilmore <dennis@ausil.us> - 24-0.5
-- add the fedora cisco openh264 repo
+* Fri Jul 22 2016 Mohan Boddu <mboddu@redhat.com> - 25-0.4
+- Disable Rawhide
+- Enable fedora, updates, updates-testing
 
-* Tue Feb 23 2016 Dennis Gilmore <dennis@ausil.us> - 24-0.4
-- setup for f24 branching
-- Obsolete older fedora-repos-rawhide
-- disable rawhide
-- enable fedora, updates and updates-testing
+* Fri Jun 06 2016 Dennis Gilmore <dennis@ausil.us> - 25-0.3
+- add the fedora build cisco shipped openh264 repo
 
-* Wed Feb 03 2016 Fedora Release Engineering <releng@fedoraproject.org> - 24-0.3
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+* Thu Mar 31 2016 Dennis Gilmore <dennis@ausil.us> - 25-0.2
+- add the Fedora 25 gpg keys
 
-* Mon Oct 19 2015 Dennis Gilmore <dennis@ausil.us> - 24-0.2
-- add all keys f7 up to f24 rhbz#1246701
-
-* Tue Jul 14 2015 Dennis Gilmore <dennis@ausil.us> - 24-0.1
-- Setup for rawhide being f24
+* Tue Feb 23 2016 Dennis Gilmore <dennis@ausil.us> - 25-0.1
+- Setup for rawhide being f25

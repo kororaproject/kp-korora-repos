@@ -22,7 +22,7 @@
 [rawhide]
 name=Fedora - Rawhide - Developmental packages for the next Fedora release
 failovermethod=priority
-#baseurl=http://download.fedoraproject.org/pub/fedora/linux/development/rawhide/$basearch/os/
+#baseurl=http://download.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/$basearch/os/
 metalink=https://mirrors.fedoraproject.org/metalink?repo=rawhide&arch=$basearch
 enabled=0
 metadata_expire=6h
@@ -33,7 +33,7 @@ skip_if_unavailable=False
 [rawhide-debuginfo]
 name=Fedora - Rawhide - Debug
 failovermethod=priority
-#baseurl=http://download.fedoraproject.org/pub/fedora/linux/development/rawhide/$basearch/debug/
+#baseurl=http://download.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/$basearch/debug/
 metalink=https://mirrors.fedoraproject.org/metalink?repo=rawhide-debug&arch=$basearch
 enabled=0
 gpgcheck=0
@@ -43,7 +43,7 @@ skip_if_unavailable=False
 [rawhide-source]
 name=Fedora - Rawhide - Source
 failovermethod=priority
-#baseurl=http://download.fedoraproject.org/pub/fedora/linux/development/rawhide/source/SRPMS/
+#baseurl=http://download.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/source/tree/
 metalink=https://mirrors.fedoraproject.org/metalink?repo=rawhide-source&arch=$basearch
 enabled=0
 gpgcheck=0
