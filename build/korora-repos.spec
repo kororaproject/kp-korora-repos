@@ -1,7 +1,7 @@
 Summary:        Korora package repositories
 Name:           korora-repos
-Version:        25
-Release:        0.6
+Version:        26
+Release:        0.8
 License:        MIT
 Group:          System Environment/Base
 URL:            https://pagure.io/fedora-repos/
@@ -79,6 +79,9 @@ install -m 644 copr.conf $RPM_BUILD_ROOT/etc/dnf/plugins/copr.conf
 %config(noreplace) /etc/yum.repos.d/fedora-rawhide.repo
 
 %changelog
+* Mon May  1 2017 Ian Firns <firnsy@kororaproject.org> 26-1
+- Update for Korora 25
+
 * Thu Sep 01 2016 Chris Smart <csmart@kororaproject.org> 25-1
 - Update for Korora 25
 
@@ -90,7 +93,7 @@ install -m 644 copr.conf $RPM_BUILD_ROOT/etc/dnf/plugins/copr.conf
 - disable updates-testing
 - set fedora repodata expiry at 28 days
 - add all Fedora gpg keys
-    
+
 * Tue Jul 14 2015 Dennis Gilmore <dennis@ausil.us> - 23-0.4
 - disable rawhide
 - enable fedora, updates, updates-testing
@@ -102,5 +105,5 @@ install -m 644 copr.conf $RPM_BUILD_ROOT/etc/dnf/plugins/copr.conf
 - add the Fedora 23 gpg keys
 
 * Tue Feb 10 2015 Peter Robinson <pbrobinson@fedoraproject.org> 23-0.1
-- Setup for f23 rawhide                                                                                                                                                                                            
+- Setup for f23 rawhide
 
