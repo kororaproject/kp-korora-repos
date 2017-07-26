@@ -1,7 +1,7 @@
 Summary:        Korora package repositories
 Name:           korora-repos
-Version:        26
-Release:        0.5
+Version:        25
+Release:        0.8
 License:        MIT
 Group:          System Environment/Base
 URL:            https://pagure.io/fedora-repos/
@@ -79,8 +79,8 @@ install -m 644 copr.conf $RPM_BUILD_ROOT/etc/dnf/plugins/copr.conf
 %config(noreplace) /etc/yum.repos.d/fedora-rawhide.repo
 
 %changelog
-* Wed Jul 19 2017 Ian Firns <firnsy@kororaproject.org> 26-1
-- Update for Korora 26
+* Wed Jul 26 2017 Ian Firns <firnsy@kororaproject.org> 25-0.8
+- Include keys for Korora 26
 
 * Thu Sep 01 2016 Chris Smart <csmart@kororaproject.org> 25-1
 - Update for Korora 25
