@@ -79,7 +79,6 @@ install -m 644 copr.conf $RPM_BUILD_ROOT/etc/dnf/plugins/copr.conf
 %config(noreplace) /etc/yum.repos.d/fedora-rawhide.repo
 
 %changelog
-<<<<<<< HEAD
 * Wed Jul 19 2017 Ian Firns <firnsy@kororaproject.org> 26-1
 - Update for Korora 26
 
