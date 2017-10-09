@@ -1,7 +1,7 @@
 Summary:        Fedora package repositories
 Name:           fedora-repos
-Version:        25
-Release:        0.5
+Version:        26
+Release:        1
 License:        MIT
 Group:          System Environment/Base
 URL:            https://pagure.io/fedora-repos/
@@ -9,8 +9,7 @@ URL:            https://pagure.io/fedora-repos/
 Source:         %{name}-%{version}.tar.bz2
 Provides:       fedora-repos(%{version})
 Requires:       system-release(%{version})
-Obsoletes:      fedora-repos-rawhide <= 25-0.3
-Obsoletes:      fedora-repos-anaconda < 22-0.3
+Obsoletes:      fedora-repos-rawhide <= 26-0.5
 BuildArch:      noarch
 
 %description
@@ -73,19 +72,41 @@ done
 %config(noreplace) /etc/yum.repos.d/fedora-rawhide.repo
 
 %changelog
-* Mon Aug 08 2016 Dennis Gilmore <dennis@ausil.us> - 25-0.5
-- fix up archmap file
-- add f26 gpg keys
+* Fri Jun 30 2017 Mohan Boddu <mboddu@redhat.com> - 26-1
+- Fix Fedora 14 secondary key
+- Setup for F26 Final
+- Disable updates-testing
+- Set metadata expiry for fedora repo
 
-* Fri Jul 22 2016 Mohan Boddu <mboddu@redhat.com> - 25-0.4
+* Tue May 16 2017 Dennis Gilmore <dennis@ausil.us> - 26-0.9
+- add the missing Fedora 14 secondary arch key
+- add the new modularity key
+
+* Mon Mar 02 2017 Mohan Boddu <mboddu@redhat.com> - 26-0.8
+- Fix up obsoletes fedora-repos-rawhide versioning
+
+* Mon Feb 27 2017 Mohan Boddu <mboddu@redhat.com> - 26-0.7
+- Fix up dependencies
+
+* Mon Feb 27 2017 Mohan Boddu <mboddu@redhat.com> - 26-0.6
 - Disable Rawhide
 - Enable fedora, updates, updates-testing
 
-* Fri Jun 06 2016 Dennis Gilmore <dennis@ausil.us> - 25-0.3
-- add the fedora build cisco shipped openh264 repo
+* Thu Feb 23 2017 Dennis Gilmore <dennis@ausil.us> - 26-0.5
+- add the Fedora 27 key and matching archmap entry
 
-* Thu Mar 31 2016 Dennis Gilmore <dennis@ausil.us> - 25-0.2
-- add the Fedora 25 gpg keys
+* Mon Sep 26 2016 Dennis Gilmore <dennis@ausil.us> - 26-0.4
+- enable gpgcheck on rawhide
 
-* Tue Feb 23 2016 Dennis Gilmore <dennis@ausil.us> - 25-0.1
-- Setup for rawhide being f25
+* Wed Sep 14 2016 Dennis Gilmore <dennis@ausil.us> - 26-0.3
+- fix up baseurl lines
+- replace f26 gpg key for wrong uid
+- add zypper support rhbz#1373317
+- sign aarch64 with primary key
+
+* Mon Aug 08 2016 Dennis Gilmore <dennis@ausil.us> - 26-0.2
+- fix up archmap file
+- add f26 gpg keys
+
+* Fri Jul 22 2016 Mohan Boddu <mboddu@redhat.com> - 26-0.1
+- Setup for rawhide being f26
