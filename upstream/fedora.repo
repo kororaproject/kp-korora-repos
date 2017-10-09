@@ -4,7 +4,7 @@ failovermethod=priority
 #baseurl=http://download.fedoraproject.org/pub/fedora/linux/releases/$releasever/Everything/$basearch/os/
 metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&arch=$basearch
 enabled=1
-#metadata_expire=7d
+metadata_expire=7d
 repo_gpgcheck=0
 type=rpm
 gpgcheck=1

@@ -1,6 +1,7 @@
 [fedora-cisco-openh264]
 name=Fedora $releasever openh264 (From Cisco) - $basearch
 baseurl=https://codecs.fedoraproject.org/openh264/$releasever/$basearch/
+type=rpm
 enabled=0
 enabled_metadata=1
 metadata_expire=14d
@@ -13,6 +14,7 @@ skip_if_unavailable=False
 name=Fedora $releasever openh264 (From Cisco) - $basearch - Debug
 failovermethod=priority
 baseurl=https://codecs.fedoraproject.org/openh264/$releasever/$basearch/debug/
+type=rpm
 enabled=0
 metadata_expire=28d
 repo_gpgcheck=1
