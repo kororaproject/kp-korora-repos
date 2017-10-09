@@ -1,6 +1,6 @@
 Summary:        Korora package repositories
 Name:           korora-repos
-Version:        26
+Version:        27
 Release:        1.0
 License:        MIT
 Group:          System Environment/Base
