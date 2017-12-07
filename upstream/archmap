@@ -17,7 +17,7 @@ fedora-13-secondary: arm mips
 fedora-14-primary: i386 x86_64
 fedora-14-secondary: arm
 
-fedora-15-primary: i386 x86_64 
+fedora-15-primary: i386 x86_64
 fedora-15-secondary: arm armhfp ppc ppc64 s390 s390x
 
 fedora-16-primary: i386 x86_64
@@ -56,3 +56,7 @@ fedora-26-secondary: s390x
 fedora-27-primary: i386 x86_64 armhfp aarch64 ppc64 ppc64le s390x
 
 fedora-28-primary: i386 x86_64 armhfp aarch64 ppc64 ppc64le s390x
+
+korora-27-primary: x86_64
+
+korora-28-primary: x86_64
